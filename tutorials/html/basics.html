@@ -1,39 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Basics | Learn Web Development</title>
+    <title>HTML Basics | Learn Web Dev</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tutorial.css">
 </head>
 <body>
+    <!-- Navigation (same as introduction.html) -->
     <nav class="floating-nav">
-        <div class="nav-content">
-            <div class="logo">Learn Web Dev</div>
-            <div class="search">
-                <input type="text" placeholder="Search tutorials...">
-            </div>
-            <div class="nav-links">
-                <a href="../../index.html">Home</a>
-                <a href="#practice">Practice</a>
-                <a href="#challenges">Challenges</a>
-            </div>
-        </div>
+        <!-- Same navigation content -->
     </nav>
 
     <div class="tutorial-container">
+        <!-- Sidebar -->
         <aside class="tutorial-sidebar">
             <div class="chapter-list">
                 <h3>HTML Basics</h3>
                 <ul>
-                    <li class="active"><a href="basics.html">Introduction</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li class="active"><a href="basics.html">HTML Basics</a></li>
                     <li><a href="elements.html">HTML Elements</a></li>
                     <li><a href="attributes.html">HTML Attributes</a></li>
                 </ul>
             </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="tutorial-content">
             <h1>HTML Basics</h1>
             <div class="content-box">
@@ -50,23 +44,23 @@
                     </ul>
                 </div>
 
-                <div class="example-section">
-                    <h3>Basic HTML Structure</h3>
-                    <div class="code-example">
-                        <pre><code>
-&lt;!DOCTYPE html&gt;
+                <div class="code-example">
+                    <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-                        </code></pre>
-                        <button class="try-btn">Try it Yourself</button>
-                    </div>
+&lt;/html&gt;</code></pre>
+                    <button class="try-btn">Try it Yourself</button>
+                </div>
+
+                <div class="tutorial-nav">
+                    <a href="introduction.html" class="nav-btn">← Previous: Introduction</a>
+                    <a href="elements.html" class="nav-btn">Next: HTML Elements →</a>
                 </div>
             </div>
         </main>
