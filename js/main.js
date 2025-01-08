@@ -40,52 +40,60 @@ document.addEventListener('DOMContentLoaded', function() {
             const codeBlock = this.previousElementSibling.querySelector('code');
             const code = codeBlock.textContent.trim();
 
-            // Creating a new div to hold the code editor and output
-            const editorContainer = document.createElement('div');
-            editorContainer.classList.add('editor-container');
+            // Toggle editing mode
+            if (!this.classList.contains('editing')) {
+                this.classList.add('editing');
 
-            // Creating the code editor textarea
-            const textarea = document.createElement('textarea');
-            textarea.value = code;
-            textarea.style.width = '100%';
-            textarea.style.height = '200px';
-            textarea.style.background = '#2d2d2d';
-            textarea.style.color = '#fff';
-            textarea.style.border = 'none';
-            textarea.style.padding = '1rem';
-            textarea.style.fontFamily = 'monospace';
-            textarea.style.fontSize = '14px';
+                // Creating the code editor textarea
+                const textarea = document.createElement('textarea');
+                textarea.value = code;
+                textarea.style.width = '100%';
+                textarea.style.height = '200px';
+                textarea.style.background = '#2d2d2d';
+                textarea.style.color = '#fff';
+                textarea.style.border = 'none';
+                textarea.style.padding = '1rem';
+                textarea.style.fontFamily = 'monospace';
+                textarea.style.fontSize = '14px';
 
-            // Creating the run button
-            const runButton = document.createElement('button');
-            runButton.textContent = 'Run Code';
-            runButton.style.background = '#ff5722';
-            runButton.style.color = '#fff';
-            runButton.style.border = 'none';
-            runButton.style.padding = '1rem';
-            runButton.style.marginTop = '1rem';
-            runButton.style.cursor = 'pointer';
+                // Creating the run button
+                const runButton = document.createElement('button');
+                runButton.textContent = 'Run Code';
+                runButton.style.background = '#ff5722';
+                runButton.style.color = '#fff';
+                runButton.style.border = 'none';
+                runButton.style.padding = '1rem';
+                runButton.style.marginTop = '1rem';
+                runButton.style.cursor = 'pointer';
 
-            // Creating the output iframe
-            const outputIframe = document.createElement('iframe');
-            outputIframe.style.width = '100%';
-            outputIframe.style.height = '200px';
-            outputIframe.style.background = '#fff';
-            outputIframe.style.border = 'none';
-            outputIframe.style.marginTop = '1rem';
+                // Creating the output iframe
+                const outputIframe = document.createElement('iframe');
+                outputIframe.style.width = '100%';
+                outputIframe.style.height = '200px';
+                outputIframe.style.background = '#fff';
+                outputIframe.style.border = 'none';
+                outputIframe.style.marginTop = '1rem';
 
-            // Append textarea, run button, and output iframe to the container
-            editorContainer.appendChild(textarea);
-            editorContainer.appendChild(runButton);
-            editorContainer.appendChild(outputIframe);
+                // Append textarea, run button, and output iframe
+                this.parentElement.appendChild(textarea);
+                this.parentElement.appendChild(runButton);
+                this.parentElement.appendChild(outputIframe);
 
-            // Insert the editor container after the try button
-            this.parentElement.appendChild(editorContainer);
+                // Add event listener to run the code
+                runButton.addEventListener('click', () => {
+                    outputIframe.srcdoc = textarea.value;
+                });
+            } else {
+                this.classList.remove('editing');
+                const textarea = this.parentElement.querySelector('textarea');
+                const runButton = this.parentElement.querySelector('button');
+                const outputIframe = this.parentElement.querySelector('iframe');
 
-            // Add event listener to run the code
-            runButton.addEventListener('click', () => {
-                outputIframe.srcdoc = textarea.value;
-            });
+                // Remove editor elements
+                this.parentElement.removeChild(textarea);
+                this.parentElement.removeChild(runButton);
+                this.parentElement.removeChild(outputIframe);
+            }
         });
     });
 
