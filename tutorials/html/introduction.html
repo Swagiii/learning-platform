@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to HTML | Learn Web Development</title>
+    <title>Introduction to HTML | Learn Web Dev</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tutorial.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="floating-nav">
         <div class="nav-content">
-            <div class="logo">Learn Web Dev</div>
+            <a href="../../index.html" class="logo">Learn Web Dev</a>
             <div class="search">
                 <input type="text" placeholder="Search tutorials...">
             </div>
@@ -18,45 +19,58 @@
                 <a href="../../index.html">Home</a>
                 <a href="#practice">Practice</a>
                 <a href="#challenges">Challenges</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
             </div>
         </div>
     </nav>
 
     <div class="tutorial-container">
+        <!-- Sidebar -->
         <aside class="tutorial-sidebar">
             <div class="chapter-list">
-                <h3>HTML Course</h3>
+                <h3>HTML Basics</h3>
                 <ul>
                     <li class="active"><a href="introduction.html">Introduction</a></li>
                     <li><a href="basics.html">HTML Basics</a></li>
                     <li><a href="elements.html">HTML Elements</a></li>
+                    <li><a href="attributes.html">HTML Attributes</a></li>
                 </ul>
             </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="tutorial-content">
             <h1>Introduction to Web Development</h1>
             <div class="content-box">
-                <h2>Getting Started</h2>
-                <p>Welcome to your web development journey! This course will teach you everything you need to know about building websites.</p>
+                <h2>Getting Started with HTML</h2>
+                <p>Welcome to your web development journey! HTML is the foundation of all web pages.</p>
 
-                <div class="course-overview">
+                <div class="key-points">
                     <h3>What You'll Learn:</h3>
                     <ul>
-                        <li>HTML fundamentals</li>
+                        <li>Basic HTML structure</li>
                         <li>Creating web pages</li>
-                        <li>Working with text and links</li>
-                        <li>Adding images and media</li>
+                        <li>Working with elements</li>
+                        <li>Adding content to pages</li>
                     </ul>
                 </div>
 
-                <div class="requirements">
-                    <h3>Requirements:</h3>
-                    <ul>
-                        <li>A text editor (like VS Code, Sublime Text)</li>
-                        <li>A web browser</li>
-                        <li>Basic computer knowledge</li>
-                    </ul>
+                <div class="code-example">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="try-btn">Try it Yourself</button>
+                </div>
+
+                <div class="tutorial-nav">
+                    <a href="basics.html" class="nav-btn">Next: HTML Basics →</a>
                 </div>
             </div>
         </main>
