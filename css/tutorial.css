@@ -36,10 +36,10 @@
 
 .chapter-list a {
     display: block;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     color: var(--text);
     text-decoration: none;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
 
@@ -51,22 +51,18 @@
 
 /* Tutorial Content */
 .tutorial-content {
-    padding: 2rem;
     background: var(--background);
+    padding: 2rem;
     border-radius: 0.5rem;
     border: 1px solid var(--border-color);
 }
 
-.content-box {
-    margin-bottom: 2rem;
-}
-
 /* Code Examples */
 .code-example {
-    background: var(--card-bg);
+    background: var(--code-bg);
     border-radius: 0.5rem;
-    overflow: hidden;
     margin: 1.5rem 0;
+    overflow: hidden;
 }
 
 .code-example pre {
@@ -77,30 +73,22 @@
 
 .code-example code {
     font-family: 'Fira Code', monospace;
-    color: #e0e0e0;
-}
-
-/* Preview Box */
-.preview-box {
-    background: var(--background);
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    margin: 1rem 0;
-}
-
-/* Try it Button */
-.try-btn {
+    color: var(--code-text);
     display: block;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Try it Yourself Button */
+.try-btn {
     width: 100%;
-    padding: 0.75rem;
+    padding: 1rem;
     background: var(--primary);
     color: white;
     border: none;
-    border-radius: 0 0 0.5rem 0.5rem;
-    cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .try-btn:hover {
@@ -116,12 +104,28 @@
     border-radius: 0 0.5rem 0.5rem 0;
 }
 
-/* Practice Section */
-.practice-section {
+/* Navigation Buttons */
+.tutorial-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     margin-top: 3rem;
-    padding: 2rem;
+}
+
+.nav-btn {
+    padding: 1rem;
     background: var(--card-bg);
+    color: var(--text);
+    text-decoration: none;
     border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.nav-btn:hover {
+    background: var(--primary);
+    color: white;
 }
 
 /* Progress Indicator */
@@ -129,16 +133,6 @@
     content: '✓';
     margin-left: 0.5rem;
     color: #4CAF50;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.tutorial-section {
-    animation: fadeIn 0.5s ease-out;
 }
 
 /* Responsive Design */
@@ -150,6 +144,5 @@
     .tutorial-sidebar {
         position: static;
         height: auto;
-        margin-bottom: 2rem;
     }
 }
