@@ -9,7 +9,9 @@
     --text: #1f2937;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --border-color: #e5e7eb;
-    --code-bg: #1e1e1e;
+    --code-bg: #1a1a1a;    /* Black background for code in light theme */
+    --code-text: #ffffff;  /* White text for code in light theme */
+    --heading-color: #1f2937;
 }
 
 /* Dark Theme */
@@ -22,7 +24,9 @@
     --text: #f9fafb;
     --nav-bg: rgba(17, 24, 39, 0.95);
     --border-color: #374151;
-    --code-bg: #1a1a1a;
+    --code-bg: #ffffff;    /* White background for code in dark theme */
+    --code-text: #1a1a1a;  /* Black text for code in dark theme */
+    --heading-color: #f9fafb;
 }
 
 /* Reset & Base Styles */
@@ -37,6 +41,18 @@ body {
     line-height: 1.6;
     color: var(--text);
     background: var(--background);
+}
+
+/* Section Headings */
+.popular-tutorials h2,
+.features h2,
+.code-editor-promo h2 {
+    text-align: center;
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1rem 0;
 }
 
 /* Main Navigation */
@@ -105,41 +121,6 @@ body {
     color: var(--primary);
 }
 
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: auto;
-}
-
-.search {
-    position: relative;
-}
-
-.search input {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background: var(--card-bg);
-    color: var(--text);
-    width: 200px;
-    font-size: 0.9rem;
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-.theme-toggle:hover {
-    background: var(--accent);
-}
-
 /* Main Container */
 .main-container {
     margin-top: 80px;
@@ -159,59 +140,32 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    color: var(--primary);
+    font-size: 3.5rem;
+    color: var(--heading-color);
     margin-bottom: 1rem;
+    font-weight: 800;
 }
 
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    color: var(--text);
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.2s;
-}
-
-.btn.primary {
-    background: var(--primary);
-    color: white;
-}
-
-.btn.secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-/* Tutorial Grid */
+/* Tutorial Cards */
 .tutorial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
+    padding: 0 1rem;
 }
 
 .tutorial-card {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
 
@@ -220,7 +174,7 @@ body {
 }
 
 .tutorial-card h3 {
-    color: var(--primary);
+    color: var(--heading-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -246,19 +200,12 @@ body {
     color: var(--secondary);
 }
 
-/* Features Section - Why Choose Us */
+/* Features Section */
 .features {
     padding: 4rem 2rem;
     background: var(--accent);
     border-radius: 1rem;
     margin: 2rem 0;
-}
-
-.features h2 {
-    text-align: center;
-    color: var(--primary);
-    margin-bottom: 2rem;
-    font-size: 2rem;
 }
 
 .feature-grid {
@@ -281,7 +228,7 @@ body {
 }
 
 .feature-card h3 {
-    color: var(--primary);
+    color: var(--heading-color);
     margin-bottom: 1rem;
     font-size: 1.25rem;
 }
@@ -292,13 +239,6 @@ body {
     background: var(--accent);
     border-radius: 1rem;
     margin: 2rem 0;
-}
-
-.code-editor-promo h2 {
-    text-align: center;
-    color: var(--primary);
-    margin-bottom: 2rem;
-    font-size: 2rem;
 }
 
 .editor-demo {
@@ -328,7 +268,32 @@ body {
     font-family: 'Fira Code', 'Consolas', monospace;
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #ffffff;
+    color: var(--code-text);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -358,31 +323,6 @@ footer {
     text-decoration: none;
 }
 
-/* Theme-specific adjustments */
-[data-theme="light"] .features {
-    background: #f0f7ff;
-}
-
-[data-theme="light"] .feature-card {
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
-}
-
-[data-theme="light"] .code-example {
-    background: #1e1e1e;
-    border-color: #e5e7eb;
-}
-
-[data-theme="dark"] .feature-card {
-    background: var(--card-bg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-[data-theme="dark"] .code-example {
-    background: #1a1a1a;
-    border-color: #333;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-content {
@@ -390,21 +330,8 @@ footer {
         padding: 1rem;
     }
 
-    .nav-controls {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .search input {
-        width: 100%;
-    }
-
     .hero h1 {
-        font-size: 2rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
+        font-size: 2.5rem;
     }
 
     .tutorial-grid {
