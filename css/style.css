@@ -9,6 +9,7 @@
     --text: #1f2937;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --border-color: #e5e7eb;
+    --code-bg: #1e1e1e;
 }
 
 /* Dark Theme */
@@ -21,6 +22,7 @@
     --text: #f9fafb;
     --nav-bg: rgba(17, 24, 39, 0.95);
     --border-color: #374151;
+    --code-bg: #1a1a1a;
 }
 
 /* Reset & Base Styles */
@@ -244,9 +246,19 @@ body {
     color: var(--secondary);
 }
 
-/* Features Section */
+/* Features Section - Why Choose Us */
 .features {
-    padding: 4rem 0;
+    padding: 4rem 2rem;
+    background: var(--accent);
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.features h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .feature-grid {
@@ -260,6 +272,63 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Code Editor Section */
+.code-editor-promo {
+    padding: 3rem 2rem;
+    background: var(--accent);
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.code-editor-promo h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.editor-demo {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.code-example {
+    background: var(--code-bg);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.code-example pre {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.code-example code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ffffff;
 }
 
 /* Footer */
@@ -289,18 +358,29 @@ footer {
     text-decoration: none;
 }
 
-/* Dark theme specific adjustments */
-[data-theme="dark"] .tutorial-card {
+/* Theme-specific adjustments */
+[data-theme="light"] .features {
+    background: #f0f7ff;
+}
+
+[data-theme="light"] .feature-card {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="light"] .code-example {
+    background: #1e1e1e;
+    border-color: #e5e7eb;
+}
+
+[data-theme="dark"] .feature-card {
     background: var(--card-bg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-[data-theme="dark"] .learn-btn {
-    color: #60a5fa;
-}
-
-[data-theme="dark"] .learn-btn:hover {
-    color: #93c5fd;
+[data-theme="dark"] .code-example {
+    background: #1a1a1a;
+    border-color: #333;
 }
 
 /* Responsive Design */
