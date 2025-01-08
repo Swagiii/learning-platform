@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Web Development</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tutorial.css">
 </head>
 <body>
     <!-- Floating Navigation -->
@@ -23,72 +24,135 @@
         </div>
     </nav>
 
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- Hero Section -->
-        <header class="hero">
-            <div class="hero-content">
-                <h1>Master Web Development</h1>
-                <p>Start your journey with interactive tutorials and real-world projects</p>
-                <div class="cta-buttons">
-                    <a href="tutorials/html/introduction.html" class="btn primary">Start Learning</a>
-                    <a href="#features" class="btn secondary">Explore Features</a>
-                </div>
+    <!-- Tutorial Container -->
+    <div class="tutorial-container">
+        <!-- Sidebar -->
+        <aside class="tutorial-sidebar">
+            <div class="chapter-list">
+                <h3>HTML Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/html/home.html">HTML HOME</a></li>
+                    <li><a href="tutorials/html/introduction.html">HTML Introduction</a></li>
+                    <li><a href="tutorials/html/editors.html">HTML Editors</a></li>
+                    <li><a href="tutorials/html/basic.html">HTML Basic</a></li>
+                    <li><a href="tutorials/html/elements.html">HTML Elements</a></li>
+                    <li><a href="tutorials/html/attributes.html">HTML Attributes</a></li>
+                    <li><a href="tutorials/html/headings.html">HTML Headings</a></li>
+                    <li><a href="tutorials/html/paragraphs.html">HTML Paragraphs</a></li>
+                    <li><a href="tutorials/html/styles.html">HTML Styles</a></li>
+                    <li><a href="tutorials/html/formatting.html">HTML Formatting</a></li>
+                    <li><a href="tutorials/html/quotations.html">HTML Quotations</a></li>
+                    <li><a href="tutorials/html/comments.html">HTML Comments</a></li>
+                    <li><a href="tutorials/html/colors.html">HTML Colors</a></li>
+                    <li><a href="tutorials/html/css.html">HTML CSS</a></li>
+                    <li><a href="tutorials/html/links.html">HTML Links</a></li>
+                    <li><a href="tutorials/html/images.html">HTML Images</a></li>
+                    <li><a href="tutorials/html/favicon.html">HTML Favicon</a></li>
+                    <li><a href="tutorials/html/tables.html">HTML Tables</a></li>
+                    <li><a href="tutorials/html/lists.html">HTML Lists</a></li>
+                    <li><a href="tutorials/html/block-inline.html">HTML Block & Inline</a></li>
+                    <li><a href="tutorials/html/div.html">HTML Div</a></li>
+                </ul>
             </div>
-        </header>
 
-        <!-- Learning Paths -->
-        <section id="paths" class="learning-paths">
-            <h2>Choose Your Path</h2>
-            <div class="path-cards">
-                <!-- Frontend Path -->
-                <div class="path-card">
-                    <div class="card-header">Frontend Development</div>
-                    <div class="card-content">
-                        <ul class="path-steps">
-                            <li>HTML5 Fundamentals</li>
-                            <li>CSS3 & Layouts</li>
-                            <li>JavaScript ES6+</li>
-                            <li>React Basics</li>
-                        </ul>
-                        <a href="tutorials/html/introduction.html" class="start-btn">Begin Journey</a>
+            <div class="chapter-list">
+                <h3>HTML Forms</h3>
+                <ul>
+                    <li><a href="tutorials/html/forms.html">HTML Forms</a></li>
+                    <li><a href="tutorials/html/form-attributes.html">HTML Form Attributes</a></li>
+                    <li><a href="tutorials/html/form-elements.html">HTML Form Elements</a></li>
+                    <li><a href="tutorials/html/input-types.html">HTML Input Types</a></li>
+                    <li><a href="tutorials/html/input-attributes.html">Input Form Attributes</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-list">
+                <h3>HTML Graphics</h3>
+                <ul>
+                    <li><a href="tutorials/html/canvas.html">HTML Canvas</a></li>
+                    <li><a href="tutorials/html/svg.html">HTML SVG</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-list">
+                <h3>HTML Media</h3>
+                <ul>
+                    <li><a href="tutorials/html/media.html">HTML Media</a></li>
+                    <li><a href="tutorials/html/video.html">HTML Video</a></li>
+                    <li><a href="tutorials/html/audio.html">HTML Audio</a></li>
+                    <li><a href="tutorials/html/plugins.html">HTML Plug-ins</a></li>
+                    <li><a href="tutorials/html/youtube.html">HTML YouTube</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-container">
+            <!-- Hero Section -->
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Master Web Development</h1>
+                    <p>Start your journey with interactive tutorials and real-world projects</p>
+                    <div class="cta-buttons">
+                        <a href="tutorials/html/introduction.html" class="btn primary">Start Learning</a>
+                        <a href="#features" class="btn secondary">Explore Features</a>
                     </div>
                 </div>
+            </header>
 
-                <!-- Backend Path -->
-                <div class="path-card">
-                    <div class="card-header">Backend Development</div>
-                    <div class="card-content">
-                        <ul class="path-steps">
-                            <li>Node.js Basics</li>
-                            <li>Express Framework</li>
-                            <li>Database Design</li>
-                            <li>API Development</li>
-                        </ul>
-                        <a href="#" class="start-btn">Coming Soon</a>
+            <!-- Learning Paths -->
+            <section id="paths" class="learning-paths">
+                <h2>Choose Your Path</h2>
+                <div class="path-cards">
+                    <!-- Frontend Path -->
+                    <div class="path-card">
+                        <div class="card-header">Frontend Development</div>
+                        <div class="card-content">
+                            <ul class="path-steps">
+                                <li>HTML5 Fundamentals</li>
+                                <li>CSS3 & Layouts</li>
+                                <li>JavaScript ES6+</li>
+                                <li>React Basics</li>
+                            </ul>
+                            <a href="tutorials/html/introduction.html" class="start-btn">Begin Journey</a>
+                        </div>
+                    </div>
+
+                    <!-- Backend Path -->
+                    <div class="path-card">
+                        <div class="card-header">Backend Development</div>
+                        <div class="card-content">
+                            <ul class="path-steps">
+                                <li>Node.js Basics</li>
+                                <li>Express Framework</li>
+                                <li>Database Design</li>
+                                <li>API Development</li>
+                            </ul>
+                            <a href="#" class="start-btn">Coming Soon</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Features Section -->
-        <section id="features" class="features">
-            <h2>Why Choose Us?</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Interactive Learning</h3>
-                    <p>Practice as you learn with our built-in code editor</p>
+            <!-- Features Section -->
+            <section id="features" class="features">
+                <h2>Why Choose Us?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Interactive Learning</h3>
+                        <p>Practice as you learn with our built-in code editor</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Real Projects</h3>
+                        <p>Build real-world projects to strengthen your skills</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Track Progress</h3>
+                        <p>Monitor your learning journey with progress tracking</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Real Projects</h3>
-                    <p>Build real-world projects to strengthen your skills</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Track Progress</h3>
-                    <p>Monitor your learning journey with progress tracking</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
 
     <footer>
