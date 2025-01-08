@@ -1,68 +1,62 @@
-/* Tutorial Layout */
-.tutorial-container {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 80px auto 0;
-    padding: 0 2rem;
-    min-height: calc(100vh - 80px);
-}
+/* tutorial.css */
 
-/* Sidebar */
-.tutorial-sidebar {
-    position: sticky;
-    top: 80px;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-    padding: 2rem;
+/* Content Box */
+.content-box {
     background: var(--card-bg);
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
 }
 
-.chapter-list h3 {
-    margin-bottom: 1rem;
-    color: var(--text);
-}
-
-.chapter-list ul {
-    list-style: none;
-}
-
-.chapter-list li {
-    margin: 0.5rem 0;
-}
-
-.chapter-list a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: var(--text);
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.chapter-list li.active a,
-.chapter-list a:hover {
-    background: var(--primary);
-    color: white;
-}
-
-/* Tutorial Content */
-.tutorial-content {
-    background: var(--background);
+/* Intro Story Section */
+.intro-story {
+    background: var(--accent);
     padding: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
 }
 
-/* Code Examples */
+.intro-story h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Concept Grid */
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.concept-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-5px);
+}
+
+.concept-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Interactive Demo */
+.interactive-demo {
+    margin: 3rem 0;
+}
+
 .code-example {
     background: var(--code-bg);
-    border-radius: 0.5rem;
-    margin: 1.5rem 0;
+    border-radius: 0.8rem;
     overflow: hidden;
+    margin: 1.5rem 0;
 }
 
 .code-example pre {
@@ -74,12 +68,9 @@
 .code-example code {
     font-family: 'Fira Code', monospace;
     color: var(--code-text);
-    display: block;
     line-height: 1.6;
-    font-size: 14px;
 }
 
-/* Try it Yourself Button */
 .try-btn {
     width: 100%;
     padding: 1rem;
@@ -95,54 +86,85 @@
     background: var(--secondary);
 }
 
-/* Key Points Section */
-.key-points {
-    background: var(--card-bg);
-    border-left: 4px solid var(--primary);
+/* Code Breakdown */
+.breakdown-list {
+    list-style: none;
+    padding: 0;
+}
+
+.breakdown-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tag {
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    padding: 0.2rem 0.4rem;
+    background: var(--accent);
+    border-radius: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+/* Fun Fact Box */
+.fun-fact-box {
+    background: var(--accent);
     padding: 1.5rem;
+    border-radius: 0.8rem;
+    border-left: 4px solid #ffd700;
     margin: 2rem 0;
-    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Checklist */
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.checklist li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
 }
 
 /* Navigation Buttons */
 .tutorial-nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
     margin-top: 3rem;
+    text-align: right;
 }
 
 .nav-btn {
-    padding: 1rem;
-    background: var(--card-bg);
-    color: var(--text);
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: white;
     text-decoration: none;
     border-radius: 0.5rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    transition: background-color 0.3s;
 }
 
 .nav-btn:hover {
-    background: var(--primary);
-    color: white;
-}
-
-/* Progress Indicator */
-.chapter-list li.completed a::after {
-    content: '✓';
-    margin-left: 0.5rem;
-    color: #4CAF50;
+    background: var(--secondary);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .tutorial-container {
+    .content-box {
+        padding: 1.5rem;
+    }
+    
+    .concept-grid {
         grid-template-columns: 1fr;
     }
-
-    .tutorial-sidebar {
-        position: static;
-        height: auto;
+    
+    .code-example {
+        margin: 1rem 0;
     }
 }
