@@ -242,7 +242,7 @@ body {
 }
 
 .editor-demo {
-    background: var(--card-bg);
+    background: var(--code-bg);  /* Changed from var(--card-bg) to match code background */
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -253,9 +253,9 @@ body {
 .code-example {
     background: var(--code-bg);
     padding: 1.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    margin: 1rem;
+    margin: 0;  /* Changed from 1rem to 0 to remove white space */
+    border: none;  /* Removed border */
+    border-radius: 0;  /* Changed from 0.5rem to 0 */
 }
 
 .code-example pre {
