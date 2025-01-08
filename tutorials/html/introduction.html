@@ -3,93 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Begin Your HTML Journey | Learn Web Dev</title>
+    <title>Introduction to HTML | LearnDev</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tutorial.css">
 </head>
 <body>
-    <!-- Keep your existing navigation -->
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <!-- Keep your existing nav structure -->
+    </nav>
 
     <div class="tutorial-container">
-        <!-- Keep your existing sidebar -->
+        <!-- Sidebar -->
+        <aside class="tutorial-sidebar">
+            <div class="chapter-list">
+                <h3>HTML Tutorial</h3>
+                <ul>
+                    <li class="active"><a href="introduction.html">HTML Introduction</a></li>
+                    <li><a href="editors.html">HTML Editors</a></li>
+                    <li><a href="basic.html">HTML Basic</a></li>
+                    <!-- Other sidebar items -->
+                </ul>
+            </div>
+        </aside>
 
+        <!-- Main Content -->
         <main class="tutorial-content">
-            <h1>Welcome to HTML: Building Blocks of the Web</h1>
+            <h1>Introduction to HTML</h1>
             
             <div class="content-box">
                 <div class="intro-story">
-                    <h2>Imagine Building Your Dream House 🏠</h2>
-                    <p>Just like a house needs bricks, cement, and a blueprint, websites need HTML. HTML is your toolkit for building on the web - it's where every web developer's journey begins!</p>
+                    <h2>What is HTML?</h2>
+                    <p>HTML (HyperText Markup Language) is the foundation of all web pages. Think of it as the skeleton that gives every website its basic structure.</p>
                 </div>
 
-                <div class="key-concepts">
-                    <h2>What Makes HTML Special?</h2>
-                    <div class="concept-grid">
-                        <div class="concept-card">
-                            <h3>📝 The Language of Web Pages</h3>
-                            <p>HTML (HyperText Markup Language) is like giving instructions to your web browser. It's how you tell Chrome, Firefox, or Safari what to show on your screen.</p>
-                        </div>
-                        
-                        <div class="concept-card">
-                            <h3>🎨 Structure, Not Style</h3>
-                            <p>Think of HTML as the skeleton of your webpage. It organizes your content - headings, paragraphs, images - but leaves the pretty parts (colors, fonts) to its friend CSS.</p>
-                        </div>
-
-                        <div class="concept-card">
-                            <h3>🔧 Built for Everyone</h3>
-                            <p>HTML is beginner-friendly! You don't need to be a math genius or have prior coding experience. If you can write an email, you can write HTML.</p>
-                        </div>
-                    </div>
+                <div class="key-points">
+                    <h3>Key Points About HTML:</h3>
+                    <ul>
+                        <li>HTML stands for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
+                        <li>HTML describes the structure of web pages</li>
+                        <li>HTML consists of elements that tell the browser how to display content</li>
+                        <li>HTML is not a programming language; it's a markup language</li>
+                        <li>HTML is the standard markup language for creating Web pages</li>
+                    </ul>
                 </div>
 
-                <div class="interactive-demo">
-                    <h2>Your First HTML Creation</h2>
-                    <p>Let's write your first piece of HTML together. Don't worry about memorizing - focus on understanding what each part does:</p>
-                    
+                <div class="example-section">
+                    <h2>A Simple HTML Example</h2>
                     <div class="code-example">
                         <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;My First Webpage&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Hello, World!&lt;/h1&gt;
-        &lt;p&gt;I just created my first webpage!&lt;/p&gt;
-    &lt;/body&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                        <button class="try-btn">✨ Try it Live</button>
+                        <button class="try-btn">Try it Yourself ▶</button>
                     </div>
 
-                    <div class="code-breakdown">
-                        <h3>Let's Break It Down:</h3>
-                        <ul class="breakdown-list">
-                            <li><span class="tag">&lt;!DOCTYPE html&gt;</span> - "Hey browser, we're using modern HTML!"</li>
-                            <li><span class="tag">&lt;html&gt;</span> - "Everything about our webpage goes here"</li>
-                            <li><span class="tag">&lt;head&gt;</span> - "Here's some information about our webpage"</li>
-                            <li><span class="tag">&lt;title&gt;</span> - "This appears in the browser tab"</li>
-                            <li><span class="tag">&lt;body&gt;</span> - "This is what visitors will actually see"</li>
+                    <div class="code-explanation">
+                        <h3>Let's Break Down This Code:</h3>
+                        <ul>
+                            <li><code>&lt;!DOCTYPE html&gt;</code> - Declares that this is an HTML5 document</li>
+                            <li><code>&lt;html&gt;</code> - The root element of the HTML page</li>
+                            <li><code>&lt;head&gt;</code> - Contains metadata about the document</li>
+                            <li><code>&lt;title&gt;</code> - Specifies a title for the page (shown in browser tab)</li>
+                            <li><code>&lt;body&gt;</code> - Contains the visible page content</li>
+                            <li><code>&lt;h1&gt;</code> - Defines a large heading</li>
+                            <li><code>&lt;p&gt;</code> - Defines a paragraph</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="fun-fact-box">
-                    <h3>🌟 Fun Fact!</h3>
-                    <p>The first website ever created is still online! It was published in 1991, and it was just simple HTML - no fancy designs or animations. HTML has evolved a lot since then, but its core purpose remains the same: making information accessible to everyone.</p>
+                <div class="html-features">
+                    <h2>Why Learn HTML?</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h3>🌐 Universal Language</h3>
+                            <p>HTML is supported by all browsers and is essential for web development.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🚀 Easy to Learn</h3>
+                            <p>HTML has a simple, straightforward syntax that's beginner-friendly.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🛠️ Foundation Skill</h3>
+                            <p>HTML is the foundation for learning other web technologies like CSS and JavaScript.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="next-steps">
-                    <h2>Ready to Create?</h2>
-                    <p>HTML is your first step into web development. In the next lessons, you'll learn how to:</p>
-                    <ul class="checklist">
-                        <li>Create engaging content with headings and paragraphs</li>
-                        <li>Add images and links to your pages</li>
-                        <li>Organize information with lists and tables</li>
-                        <li>Build forms for user interaction</li>
-                    </ul>
+                <div class="history-section">
+                    <h2>Brief History of HTML</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>1991</h4>
+                            <p>Tim Berners-Lee created HTML as a way to structure documents for the World Wide Web</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>1995</h4>
+                            <p>HTML 2.0 was developed, adding forms and tables</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>1997-1999</h4>
+                            <p>HTML 3.2 and 4.0 introduced more features and standardization</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2014</h4>
+                            <p>HTML5 became the official standard, bringing powerful new features</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-section">
+                    <h2>Ready to Practice?</h2>
+                    <p>Before moving on, try this simple exercise:</p>
+                    <div class="exercise-box">
+                        <h3>Exercise:</h3>
+                        <p>Create a simple HTML page with:</p>
+                        <ul>
+                            <li>A main heading saying "Hello, World!"</li>
+                            <li>A paragraph about yourself</li>
+                            <li>Another heading and paragraph of your choice</li>
+                        </ul>
+                        <button class="exercise-btn">Start Exercise ▶</button>
+                    </div>
                 </div>
 
                 <div class="tutorial-nav">
-                    <a href="basics.html" class="nav-btn">Next: Let's Write Some HTML! →</a>
+                    <a href="editors.html" class="nav-btn">Next: HTML Editors →</a>
                 </div>
             </div>
         </main>
