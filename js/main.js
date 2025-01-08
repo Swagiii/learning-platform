@@ -33,68 +33,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Code Editor Functionality
+    // Code Editor Functionality within the same box
     const tryButtons = document.querySelectorAll('.try-btn');
     tryButtons.forEach(button => {
         button.addEventListener('click', function() {
             const codeBlock = this.previousElementSibling.querySelector('code');
             const code = codeBlock.textContent.trim();
-            
-            const editorWindow = window.open('', '_blank', 'width=800,height=600');
-            editorWindow.document.write(`
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Code Editor</title>
-                    <style>
-                        body { margin: 0; font-family: system-ui; background: #1e1e1e; }
-                        .editor-container { display: grid; grid-template-columns: 1fr 1fr; height: 100vh; }
-                        .code-panel { display: flex; flex-direction: column; padding: 1rem; }
-                        textarea { 
-                            width: 100%; 
-                            height: calc(100vh - 100px); 
-                            background: #2d2d2d; 
-                            color: #fff; 
-                            border: none; 
-                            padding: 1rem; 
-                            font-family: monospace;
-                            font-size: 14px;
-                        }
-                        .preview { 
-                            background: white; 
-                            height: 100vh; 
-                            border: none;
-                        }
-                        .run-btn {
-                            background: #2563eb;
-                            color: white;
-                            border: none;
-                            padding: 1rem;
-                            cursor: pointer;
-                            margin-top: 1rem;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <div class="editor-container">
-                        <div class="code-panel">
-                            <textarea id="codeEditor">${code}</textarea>
-                            <button class="run-btn" onclick="runCode()">Run Code</button>
-                        </div>
-                        <iframe class="preview" id="preview"></iframe>
-                    </div>
-                    <script>
-                        function runCode() {
-                            const code = document.getElementById('codeEditor').value;
-                            const preview = document.getElementById('preview');
-                            preview.srcdoc = code;
-                        }
-                        // Initial run
-                        runCode();
-                    </script>
-                </body>
-                </html>
-            `);
+
+            // Creating a new div to hold the code editor and output
+            const editorContainer = document.createElement('div');
+            editorContainer.classList.add('editor-container');
+
+            // Creating the code editor textarea
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            textarea.style.width = '100%';
+            textarea.style.height = '200px';
+            textarea.style.background = '#2d2d2d';
+            textarea.style.color = '#fff';
+            textarea.style.border = 'none';
+            textarea.style.padding = '1rem';
+            textarea.style.fontFamily = 'monospace';
+            textarea.style.fontSize = '14px';
+
+            // Creating the run button
+            const runButton = document.createElement('button');
+            runButton.textContent = 'Run Code';
+            runButton.style.background = '#ff5722';
+            runButton.style.color = '#fff';
+            runButton.style.border = 'none';
+            runButton.style.padding = '1rem';
+            runButton.style.marginTop = '1rem';
+            runButton.style.cursor = 'pointer';
+
+            // Creating the output iframe
+            const outputIframe = document.createElement('iframe');
+            outputIframe.style.width = '100%';
+            outputIframe.style.height = '200px';
+            outputIframe.style.background = '#fff';
+            outputIframe.style.border = 'none';
+            outputIframe.style.marginTop = '1rem';
+
+            // Append textarea, run button, and output iframe to the container
+            editorContainer.appendChild(textarea);
+            editorContainer.appendChild(runButton);
+            editorContainer.appendChild(outputIframe);
+
+            // Insert the editor container after the try button
+            this.parentElement.appendChild(editorContainer);
+
+            // Add event listener to run the code
+            runButton.addEventListener('click', () => {
+                outputIframe.srcdoc = textarea.value;
+            });
         });
     });
 
