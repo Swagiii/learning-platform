@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | LearnDev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* We'll add these styles directly first, then move to style.css later */
+        .auth-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-form {
+            text-align: center;
+        }
+
+        .auth-form.hidden {
+            display: none;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            background: var(--background);
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        .auth-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .google-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: white;
+            color: #333;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Navigation (same as your existing nav) -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo">LearnDev</a>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <!-- Sign In Form -->
+        <div class="auth-form" id="signInForm">
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        id="loginEmail" 
+                        placeholder="Email" 
+                        required
+                        autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="password" 
+                        id="loginPassword" 
+                        placeholder="Password" 
+                        required
+                        autocomplete="current-password">
+                </div>
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+                <button type="submit" class="auth-btn">Sign In</button>
+                <button type="button" class="google-btn" id="googleSignIn">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                         alt="Google logo" 
+                         width="18" 
+                         height="18">
+                    Sign in with Google
+                </button>
+            </form>
+            <p style="margin-top: 1rem;">
+                Don't have an account? 
+                <a href="#" id="showSignUp">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Add Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    <!-- Add reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+</html>
