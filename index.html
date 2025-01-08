@@ -3,79 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Tutorials</title>
+    <title>CodeMaster | Learn Web Development</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/prism.css">
-    <link rel="stylesheet" href="css/dark-mode.css">
 </head>
 <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <div class="nav-brand">
-            <button id="menuToggle" class="menu-toggle">☰</button>
-            <a href="index.html">WebDev Learning</a>
-        </div>
-        <div class="nav-links">
-            <div class="search-box">
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-content">
+            <div class="logo">CodeMaster</div>
+            <div class="search">
                 <input type="text" placeholder="Search tutorials...">
             </div>
-            <button id="darkModeToggle" class="theme-toggle">🌙</button>
+            <div class="nav-links">
+                <a href="#paths">Learning Paths</a>
+                <a href="#practice">Practice</a>
+                <a href="#challenges">Challenges</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content Area -->
-    <div class="container">
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <div class="tutorial-nav">
-                <h3>HTML Tutorial</h3>
-                <ul>
-                    <li><a href="tutorials/html/introduction.html">HTML Introduction</a></li>
-                    <li><a href="tutorials/html/elements.html">HTML Elements</a></li>
-                    <li><a href="tutorials/html/attributes.html">HTML Attributes</a></li>
-                </ul>
-
-                <h3>CSS Tutorial</h3>
-                <ul>
-                    <li><a href="tutorials/css/basics.html">CSS Basics</a></li>
-                </ul>
-
-                <h3>JavaScript Tutorial</h3>
-                <ul>
-                    <li><a href="tutorials/javascript/basics.html">JavaScript Basics</a></li>
-                </ul>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Master Web Development</h1>
+            <p>Interactive learning journey with real-world projects</p>
+            <div class="cta-buttons">
+                <a href="#start" class="btn primary">Start Learning</a>
+                <a href="#tour" class="btn secondary">Take Tour</a>
             </div>
-        </aside>
+        </div>
+    </header>
 
-        <!-- Main Content -->
-        <main class="content">
-            <h1>Learn Web Development</h1>
-            <div class="welcome-section">
-                <h2>Start Learning Today</h2>
-                <p>Free interactive tutorials for web developers</p>
-                
-                <div class="tutorial-cards">
-                    <div class="card">
-                        <h3>HTML</h3>
-                        <p>The language for building web pages</p>
-                        <a href="tutorials/html/introduction.html" class="btn">Learn HTML</a>
-                    </div>
-                    <div class="card">
-                        <h3>CSS</h3>
-                        <p>The language for styling web pages</p>
-                        <a href="tutorials/css/basics.html" class="btn">Learn CSS</a>
-                    </div>
-                    <div class="card">
-                        <h3>JavaScript</h3>
-                        <p>The language for programming web pages</p>
-                        <a href="tutorials/javascript/basics.html" class="btn">Learn JavaScript</a>
-                    </div>
+    <!-- Learning Paths -->
+    <section class="learning-paths">
+        <h2>Choose Your Path</h2>
+        <div class="path-cards">
+            <!-- Frontend Path -->
+            <div class="path-card">
+                <div class="card-header">Frontend Development</div>
+                <div class="card-content">
+                    <ul class="path-steps">
+                        <li>HTML5 Fundamentals</li>
+                        <li>CSS3 & Layouts</li>
+                        <li>JavaScript ES6+</li>
+                        <li>React Basics</li>
+                    </ul>
+                    <a href="tutorials/html/basics.html" class="start-btn">Begin Journey</a>
                 </div>
             </div>
-        </main>
-    </div>
 
-    <script src="js/prism.js"></script>
+            <!-- Backend Path -->
+            <div class="path-card">
+                <div class="card-header">Backend Development</div>
+                <div class="card-content">
+                    <ul class="path-steps">
+                        <li>Node.js Basics</li>
+                        <li>Express Framework</li>
+                        <li>Database Design</li>
+                        <li>API Development</li>
+                    </ul>
+                    <a href="#" class="start-btn">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Interactive Learning</h3>
+                <p>Practice as you learn with our built-in code editor</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real Projects</h3>
+                <p>Build real-world projects to strengthen your skills</p>
+            </div>
+            <div class="feature-card">
+                <h3>Community Support</h3>
+                <p>Learn together with our growing community</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CodeMaster. All rights reserved.</p>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
