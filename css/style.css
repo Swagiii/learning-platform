@@ -342,7 +342,23 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    /* For tablets and iPads */
+    .nav-content {
+        padding: 0.5rem;
+    }
+
+    .tutorial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .code-example {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 768px) {
+    /* For smaller tablets and large phones */
     .nav-content {
         flex-direction: column;
         padding: 1rem;
@@ -356,14 +372,66 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .footer-content {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+    .code-example {
+        padding: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
 
-    .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
+    .code-example pre {
+        white-space: pre;
+        word-wrap: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile phones */
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .code-editor-promo {
+        padding: 1.5rem 1rem;
+    }
+
+    .editor-demo {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Make code blocks scrollable horizontally on mobile */
+    .code-example {
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .code-example pre {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .code-example code {
+        font-size: 0.8rem;
+        min-width: max-content;
+    }
+}
+
+/* Fix for very small screens */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .code-example {
+        padding: 0.75rem;
     }
 }
