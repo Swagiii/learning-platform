@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Introduction | WebDev Learning</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+</head>
+<body>
+    <!-- Same top navigation as index.html -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <button id="menuToggle" class="menu-toggle">☰</button>
+            <a href="index.html">WebDev Learning</a>
+        </div>
+        <div class="nav-links">
+            <div class="search-box">
+                <input type="text" placeholder="Search tutorials...">
+            </div>
+            <button id="darkModeToggle" class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Same sidebar as index.html -->
+        <aside class="sidebar">
+            <div class="tutorial-nav">
+                <h3>HTML Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/html/introduction.html">HTML Introduction</a></li>
+                    <li><a href="tutorials/html/elements.html">HTML Elements</a></li>
+                    <li><a href="tutorials/html/attributes.html">HTML Attributes</a></li>
+                </ul>
+
+                <h3>CSS Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/css/basics.html">CSS Basics</a></li>
+                </ul>
+
+                <h3>JavaScript Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/javascript/basics.html">JavaScript Basics</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content tutorial-content">
+            <div class="tutorial-header">
+                <h1>HTML Introduction</h1>
+                <div class="tutorial-nav-buttons">
+                    <a href="#" class="btn btn-prev">❮ Previous</a>
+                    <a href="#" class="btn btn-next">Next ❯</a>
+                </div>
+            </div>
+
+            <div class="tutorial-body">
+                <section class="example-section">
+                    <h2>What is HTML?</h2>
+                    <ul>
+                        <li>HTML stands for Hyper Text Markup Language</li>
+                        <li>HTML is the standard markup language for creating Web pages</li>
+                        <li>HTML describes the structure of a Web page</li>
+                        <li>HTML consists of a series of elements</li>
+                        <li>HTML elements tell the browser how to display the content</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h2>A Simple HTML Example</h2>
+                    <div class="code-example">
+                        <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                        <button class="try-it-btn">Try it Yourself</button>
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h2>Practice Exercise</h2>
+                    <div class="exercise-box">
+                        <p>Create an HTML page with:</p>
+                        <ul>
+                            <li>A heading that says "Welcome"</li>
+                            <li>A paragraph that says "This is my first webpage"</li>
+                        </ul>
+                        <button class="start-exercise-btn">Start Exercise</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/prism.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
