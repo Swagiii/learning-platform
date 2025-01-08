@@ -3,85 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Web Development</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Web Development Tutorials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#html">HTML</a></li>
-            <li><a href="#exercises">Exercises</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <button id="menuToggle" class="menu-toggle">☰</button>
+            <a href="index.html">WebDev Learning</a>
+        </div>
+        <div class="nav-links">
+            <div class="search-box">
+                <input type="text" placeholder="Search tutorials...">
+            </div>
+            <button id="darkModeToggle" class="theme-toggle">🌙</button>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Existing Home Section -->
-        <section id="home">
-            <h1>Welcome to Web Development Learning</h1>
-            <p>Start your coding journey with easy-to-follow tutorials</p>
-        </section>
+    <!-- Main Content Area -->
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="tutorial-nav">
+                <h3>HTML Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/html/introduction.html">HTML Introduction</a></li>
+                    <li><a href="tutorials/html/elements.html">HTML Elements</a></li>
+                    <li><a href="tutorials/html/attributes.html">HTML Attributes</a></li>
+                </ul>
 
-        <!-- New HTML Section -->
-        <section id="html">
-            <h2>HTML Tutorials</h2>
-            <div class="content-grid">
-                <article class="tutorial-card">
-                    <h3>HTML Basics</h3>
-                    <p>Learn the fundamentals of HTML</p>
-                </article>
-                <article class="tutorial-card">
-                    <h3>HTML Elements</h3>
-                    <p>Master HTML elements and their usage</p>
-                </article>
-                <article class="tutorial-card">
-                    <h3>HTML Forms</h3>
-                    <p>Create interactive forms in HTML</p>
-                </article>
+                <h3>CSS Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/css/basics.html">CSS Basics</a></li>
+                </ul>
+
+                <h3>JavaScript Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/javascript/basics.html">JavaScript Basics</a></li>
+                </ul>
             </div>
-        </section>
+        </aside>
 
-        <!-- New Exercises Section -->
-        <section id="exercises">
-            <h2>Practice Exercises</h2>
-            <div class="content-grid">
-                <article class="tutorial-card">
-                    <h3>Basic HTML Exercise</h3>
-                    <p>Test your HTML knowledge</p>
-                    <button class="exercise-btn">Start Exercise</button>
-                </article>
-                <article class="tutorial-card">
-                    <h3>HTML Forms Exercise</h3>
-                    <p>Practice creating forms</p>
-                    <button class="exercise-btn">Start Exercise</button>
-                </article>
-            </div>
-        </section>
-
-        <!-- New About Section -->
-        <section id="about">
-            <h2>About This Platform</h2>
-            <div class="about-content">
-                <p>A free learning resource for web development enthusiasts. Our mission is to make web development learning accessible to everyone.</p>
-                <div class="features">
-                    <h3>What We Offer:</h3>
-                    <ul>
-                        <li>Comprehensive Tutorials</li>
-                        <li>Interactive Exercises</li>
-                        <li>Real-world Projects</li>
-                        <li>Community Support</li>
-                    </ul>
+        <!-- Main Content -->
+        <main class="content">
+            <h1>Learn Web Development</h1>
+            <div class="welcome-section">
+                <h2>Start Learning Today</h2>
+                <p>Free interactive tutorials for web developers</p>
+                
+                <div class="tutorial-cards">
+                    <div class="card">
+                        <h3>HTML</h3>
+                        <p>The language for building web pages</p>
+                        <a href="tutorials/html/introduction.html" class="btn">Learn HTML</a>
+                    </div>
+                    <div class="card">
+                        <h3>CSS</h3>
+                        <p>The language for styling web pages</p>
+                        <a href="tutorials/css/basics.html" class="btn">Learn CSS</a>
+                    </div>
+                    <div class="card">
+                        <h3>JavaScript</h3>
+                        <p>The language for programming web pages</p>
+                        <a href="tutorials/javascript/basics.html" class="btn">Learn JavaScript</a>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
-    <!-- New Footer -->
-    <footer>
-        <p>&copy; 2025 Learn Web Development. All rights reserved.</p>
-    </footer>
+    <script src="js/prism.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
