@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try It Yourself | WebDev Learning</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .editor-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            height: calc(100vh - 60px);
+            padding: 1rem;
+        }
+
+        .code-editor {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .code-editor textarea {
+            flex: 1;
+            padding: 1rem;
+            font-family: monospace;
+            background: #1E1E1E;
+            color: #fff;
+            border: none;
+            resize: none;
+        }
+
+        .result-frame {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ddd;
+            background: white;
+        }
+
+        .run-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="tutorial-nav">
+                <h3>HTML Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/html/introduction.html">HTML Introduction</a></li>
+                    <li><a href="tutorials/html/elements.html">HTML Elements</a></li>
+                    <li><a href="tutorials/html/attributes.html">HTML Attributes</a></li>
+                </ul>
+
+                <h3>CSS Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/css/basics.html">CSS Basics</a></li>
+                </ul>
+
+                <h3>JavaScript Tutorial</h3>
+                <ul>
+                    <li><a href="tutorials/javascript/basics.html">JavaScript Basics</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <div class="editor-container">
+        <div class="code-editor">
+            <button class="run-btn" onclick="runCode()">Run ▶</button>
+            <textarea id="htmlEditor"></textarea>
+        </div>
+        <iframe class="result-frame" id="resultFrame"></iframe>
+    </div>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById('htmlEditor').value;
+            const frame = document.getElementById('resultFrame');
+            frame.contentDocument.open();
+            frame.contentDocument.write(code);
+            frame.contentDocument.close();
+        }
+
+        // Load default example
+        document.getElementById('htmlEditor').value = `<!DOCTYPE html>
+<html>
+<head>
+    <title>Try It Yourself</title>
+</head>
+<body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+</body>
+</html>`;
+    </script>
+</body>
+</html>
