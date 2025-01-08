@@ -8,6 +8,26 @@
     <title>Introduction to HTML | Learn Web Dev</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tutorial.css">
+    <style>
+        .highlight {
+            background-color: #ffccbc;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.3rem;
+        }
+        .founder-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -26,7 +46,7 @@
         </div>
     </nav>
 
-    <div class="tutorial-container">
+    <div class="tutorial-container animated">
         <!-- Sidebar -->
         <aside class="tutorial-sidebar">
             <div class="chapter-list">
@@ -45,7 +65,7 @@
             <h1>Introduction to HTML</h1>
             <div class="content-box">
                 <h2>Welcome to the world of web development!</h2>
-                <p>HTML (HyperText Markup Language) is the backbone of the web, and learning it is the first step towards creating amazing web pages. This tutorial will guide you through the basics of HTML, its history, advantages, disadvantages, and more.</p>
+                <p>HTML (<span class="highlight">HyperText Markup Language</span>) is the backbone of the web, and learning it is the first step towards creating amazing web pages. This tutorial will guide you through the basics of HTML, its history, advantages, disadvantages, and more.</p>
 
                 <h3>Contents:</h3>
                 <ul>
@@ -59,33 +79,34 @@
                 </ul>
 
                 <h2 id="what-is-html">What is HTML?</h2>
-                <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages and web applications. HTML describes the structure of a web page using markup. Elements are the building blocks of HTML, and they tell the browser how to display content.</p>
+                <p>HTML stands for <span class="highlight">HyperText Markup Language</span>. It is the standard language for creating web pages and web applications. HTML describes the structure of a web page using markup. Elements are the building blocks of HTML, and they tell the browser how to display content.</p>
 
                 <h2 id="history-of-html">History of HTML</h2>
-                <p>HTML was created by Tim Berners-Lee in late 1991. It has undergone many revisions since its inception. The initial version was simply called "HTML." Over time, HTML has evolved to include more complex elements, attributes, and capabilities.</p>
+                <p>HTML was created by <span class="highlight">Tim Berners-Lee</span> in late 1991. It has undergone many revisions since its inception. The initial version was simply called "HTML." Over time, HTML has evolved to include more complex elements, attributes, and capabilities.</p>
 
                 <h2 id="founder-of-html">Founder of HTML</h2>
                 <p>Tim Berners-Lee, a British scientist, invented HTML while working at CERN (the European Organization for Nuclear Research). He is also known for creating the World Wide Web.</p>
+                <img src="https://www.w3.org/People/Berners-Lee/berners-lee.jpg" alt="Tim Berners-Lee" class="founder-img">
 
                 <h2 id="advantages-of-html">Advantages of HTML</h2>
                 <ul>
-                    <li>Easy to Learn and Use: HTML is simple to understand and write.</li>
-                    <li>Supported by All Browsers: Every browser can interpret and display HTML.</li>
-                    <li>Flexible: HTML can be combined with CSS and JavaScript to create dynamic and interactive web pages.</li>
-                    <li>Lightweight: HTML documents are typically small and load quickly.</li>
-                    <li>Open Standard: HTML is maintained by the World Wide Web Consortium (W3C), ensuring it remains a free and open standard.</li>
+                    <li><span class="highlight">Easy to Learn and Use:</span> HTML is simple to understand and write.</li>
+                    <li><span class="highlight">Supported by All Browsers:</span> Every browser can interpret and display HTML.</li>
+                    <li><span class="highlight">Flexible:</span> HTML can be combined with CSS and JavaScript to create dynamic and interactive web pages.</li>
+                    <li><span class="highlight">Lightweight:</span> HTML documents are typically small and load quickly.</li>
+                    <li><span class="highlight">Open Standard:</span> HTML is maintained by the World Wide Web Consortium (W3C), ensuring it remains a free and open standard.</li>
                 </ul>
 
                 <h2 id="disadvantages-of-html">Disadvantages of HTML</h2>
                 <ul>
-                    <li>Static Nature: HTML is primarily static and cannot create dynamic web pages by itself.</li>
-                    <li>Limited Functionality: HTML alone does not offer features like interactivity, which require additional languages like JavaScript.</li>
-                    <li>Browser Dependency: Different browsers may interpret HTML code differently, leading to inconsistencies.</li>
-                    <li>Complexity for Large Projects: Managing large projects with just HTML can become cumbersome without proper structure and additional tools.</li>
+                    <li><span class="highlight">Static Nature:</span> HTML is primarily static and cannot create dynamic web pages by itself.</li>
+                    <li><span class="highlight">Limited Functionality:</span> HTML alone does not offer features like interactivity, which require additional languages like JavaScript.</li>
+                    <li><span class="highlight">Browser Dependency:</span> Different browsers may interpret HTML code differently, leading to inconsistencies.</li>
+                    <li><span class="highlight">Complexity for Large Projects:</span> Managing large projects with just HTML can become cumbersome without proper structure and additional tools.</li>
                 </ul>
 
                 <h2 id="year-of-introduction">Year of Introduction</h2>
-                <p>HTML was introduced in 1991 by Tim Berners-Lee. The latest version, HTML5, was officially released by the W3C in October 2014, and it continues to be updated and improved.</p>
+                <p>HTML was introduced in <span class="highlight">1991</span> by Tim Berners-Lee. The latest version, HTML5, was officially released by the W3C in October 2014, and it continues to be updated and improved.</p>
 
                 <h2 id="html-basics">HTML Basics</h2>
                 <p>To get started with HTML, you will learn about basic elements, attributes, and how to create your first web page. The next sections will dive deeper into these topics:</p>
