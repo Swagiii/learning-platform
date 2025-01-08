@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements | Learn Web Development</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+    <!-- Same Navigation -->
+    <nav class="floating-nav">
+        <!-- Copy from previous file -->
+    </nav>
+
+    <div class="tutorial-container">
+        <!-- Sidebar - Same structure but update active state -->
+        <aside class="tutorial-sidebar">
+            <div class="chapter-list">
+                <h3>HTML Basics</h3>
+                <ul>
+                    <li><a href="basics.html">Introduction</a></li>
+                    <li class="active"><a href="elements.html">HTML Elements</a></li>
+                    <li><a href="attributes.html">HTML Attributes</a></li>
+                    <li><a href="text.html">Text Elements</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tutorial-content">
+            <section id="elements" class="tutorial-section">
+                <h1>HTML Elements</h1>
+                
+                <div class="content-box">
+                    <h2>Common HTML Elements</h2>
+                    <p>HTML elements are the building blocks of HTML pages. Let's explore the most commonly used elements.</p>
+
+                    <div class="element-grid">
+                        <!-- Headings -->
+                        <div class="element-card">
+                            <h3>Headings</h3>
+                            <div class="code-example">
+                                <pre><code>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;
+                                </code></pre>
+                            </div>
+                            <div class="element-preview">
+                                <h4>Preview:</h4>
+                                <div class="preview-box">
+                                    <h1 style="font-size: 24px;">Main Heading</h1>
+                                    <h2 style="font-size: 20px;">Subheading</h2>
+                                    <h3 style="font-size: 16px;">Smaller Heading</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paragraphs -->
+                        <div class="element-card">
+                            <h3>Paragraphs</h3>
+                            <div class="code-example">
+                                <pre><code>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+                                </code></pre>
+                            </div>
+                            <button class="try-btn">Try it Yourself</button>
+                        </div>
+
+                        <!-- Lists -->
+                        <div class="element-card">
+                            <h3>Lists</h3>
+                            <div class="code-example">
+                                <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Unordered item 1&lt;/li&gt;
+    &lt;li&gt;Unordered item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Ordered item 1&lt;/li&gt;
+    &lt;li&gt;Ordered item 2&lt;/li&gt;
+&lt;/ol&gt;
+                                </code></pre>
+                            </div>
+                            <button class="try-btn">Try it Yourself</button>
+                        </div>
+                    </div>
+
+                    <!-- Practice Section -->
+                    <div class="practice-section">
+                        <h3>Practice Exercise</h3>
+                        <div class="exercise-box">
+                            <p>Create a webpage that includes:</p>
+                            <ul>
+                                <li>A main heading (h1)</li>
+                                <li>Two subheadings (h2)</li>
+                                <li>Paragraphs under each heading</li>
+                                <li>One ordered list</li>
+                                <li>One unordered list</li>
+                            </ul>
+                            <button class="start-exercise-btn">Start Exercise</button>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="tutorial-nav">
+                        <a href="basics.html" class="nav-btn prev">← Previous: Introduction</a>
+                        <a href="attributes.html" class="nav-btn next">Next: HTML Attributes →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
