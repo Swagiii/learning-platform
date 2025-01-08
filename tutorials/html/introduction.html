@@ -3,107 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Introduction | WebDev Learning</title>
+    <title>Introduction to HTML | Learn Web Development</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/prism.css">
-    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="../../css/tutorial.css">
 </head>
 <body>
-    <!-- Same top navigation as index.html -->
-    <nav class="top-nav">
-        <div class="nav-brand">
-            <button id="menuToggle" class="menu-toggle">☰</button>
-            <a href="index.html">WebDev Learning</a>
-        </div>
-        <div class="nav-links">
-            <div class="search-box">
+    <nav class="floating-nav">
+        <div class="nav-content">
+            <div class="logo">Learn Web Dev</div>
+            <div class="search">
                 <input type="text" placeholder="Search tutorials...">
             </div>
-            <button id="darkModeToggle" class="theme-toggle">🌙</button>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="#practice">Practice</a>
+                <a href="#challenges">Challenges</a>
+            </div>
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Same sidebar as index.html -->
-        <aside class="sidebar">
-            <div class="tutorial-nav">
-                <h3>HTML Tutorial</h3>
+    <div class="tutorial-container">
+        <aside class="tutorial-sidebar">
+            <div class="chapter-list">
+                <h3>HTML Course</h3>
                 <ul>
-                    <li><a href="tutorials/html/introduction.html">HTML Introduction</a></li>
-                    <li><a href="tutorials/html/elements.html">HTML Elements</a></li>
-                    <li><a href="tutorials/html/attributes.html">HTML Attributes</a></li>
-                </ul>
-
-                <h3>CSS Tutorial</h3>
-                <ul>
-                    <li><a href="tutorials/css/basics.html">CSS Basics</a></li>
-                </ul>
-
-                <h3>JavaScript Tutorial</h3>
-                <ul>
-                    <li><a href="tutorials/javascript/basics.html">JavaScript Basics</a></li>
+                    <li class="active"><a href="introduction.html">Introduction</a></li>
+                    <li><a href="basics.html">HTML Basics</a></li>
+                    <li><a href="elements.html">HTML Elements</a></li>
                 </ul>
             </div>
         </aside>
 
-        <main class="content tutorial-content">
-            <div class="tutorial-header">
-                <h1>HTML Introduction</h1>
-                <div class="tutorial-nav-buttons">
-                    <a href="#" class="btn btn-prev">❮ Previous</a>
-                    <a href="#" class="btn btn-next">Next ❯</a>
-                </div>
-            </div>
+        <main class="tutorial-content">
+            <h1>Introduction to Web Development</h1>
+            <div class="content-box">
+                <h2>Getting Started</h2>
+                <p>Welcome to your web development journey! This course will teach you everything you need to know about building websites.</p>
 
-            <div class="tutorial-body">
-                <section class="example-section">
-                    <h2>What is HTML?</h2>
+                <div class="course-overview">
+                    <h3>What You'll Learn:</h3>
                     <ul>
-                        <li>HTML stands for Hyper Text Markup Language</li>
-                        <li>HTML is the standard markup language for creating Web pages</li>
-                        <li>HTML describes the structure of a Web page</li>
-                        <li>HTML consists of a series of elements</li>
-                        <li>HTML elements tell the browser how to display the content</li>
+                        <li>HTML fundamentals</li>
+                        <li>Creating web pages</li>
+                        <li>Working with text and links</li>
+                        <li>Adding images and media</li>
                     </ul>
-                </section>
+                </div>
 
-                <section class="example-section">
-                    <h2>A Simple HTML Example</h2>
-                    <div class="code-example">
-                        <pre><code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-                        </code></pre>
-                        <button class="try-it-btn">Try it Yourself</button>
-                    </div>
-                </section>
-
-                <section class="example-section">
-                    <h2>Practice Exercise</h2>
-                    <div class="exercise-box">
-                        <p>Create an HTML page with:</p>
-                        <ul>
-                            <li>A heading that says "Welcome"</li>
-                            <li>A paragraph that says "This is my first webpage"</li>
-                        </ul>
-                        <button class="start-exercise-btn">Start Exercise</button>
-                    </div>
-                </section>
+                <div class="requirements">
+                    <h3>Requirements:</h3>
+                    <ul>
+                        <li>A text editor (like VS Code, Sublime Text)</li>
+                        <li>A web browser</li>
+                        <li>Basic computer knowledge</li>
+                    </ul>
+                </div>
             </div>
         </main>
     </div>
 
-    <script src="../../js/prism.js"></script>
     <script src="../../js/main.js"></script>
 </body>
 </html>
