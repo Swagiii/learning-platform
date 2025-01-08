@@ -31,50 +31,124 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Interactive Code Editor
-    const tryButtons = document.querySelectorAll('.try-btn');
-    tryButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const codeBlock = this.previousElementSibling.querySelector('code');
-            const code = codeBlock.textContent.trim();
-            
-            // Create popup editor
-            const editorWindow = window.open('', '_blank', 'width=800,height=600');
-            editorWindow.document.write(`
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Code Editor</title>
-                    <style>
-                        body { margin: 0; font-family: system-ui; background: #1e1e1e; color: #fff; }
-                        .editor-container { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1rem; height: 100vh; }
-                        .code-panel { display: flex; flex-direction: column; }
-                        textarea { width: 100%; height: 100%; background: #2d2d2d; color: #fff; border: none; padding: 1rem; font-family: monospace; }
-                        .preview { background: white; border: none; width: 100%; height: 100%; }
-                        .run-btn { background: #4CAF50; color: white; border: none; padding: 0.5rem; cursor: pointer; margin-top: 0.5rem; }
-                    </style>
-                </head>
-                <body>
-                    <div class="editor-container">
-                        <div class="code-panel">
-                            <textarea id="codeEditor">${code}</textarea>
-                            <button class="run-btn" onclick="runCode()">Run Code</button>
-                        </div>
-                        <iframe class="preview" id="preview"></iframe>
+    // Try it Yourself Button
+const tryButtons = document.querySelectorAll('.try-btn');
+tryButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const codeBlock = this.previousElementSibling;
+        const code = codeBlock.textContent.trim();
+        
+        const editorWindow = window.open('', '_blank', 'width=800,height=600');
+        editorWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Code Editor</title>
+                <style>
+                    body { margin: 0; font-family: system-ui; background: #1e1e1e; }
+                    .editor-container { display: grid; grid-template-columns: 1fr 1fr; height: 100vh; }
+                    .code-panel { display: flex; flex-direction: column; padding: 1rem; }
+                    textarea { 
+                        width: 100%; 
+                        height: calc(100vh - 100px); 
+                        background: #2d2d2d; 
+                        color: #fff; 
+                        border: none; 
+                        padding: 1rem; 
+                        font-family: monospace;
+                        font-size: 14px;
+                    }
+                    .preview { 
+                        background: white; 
+                        height: 100vh; 
+                        border: none;
+                    }
+                    .run-btn {
+                        background: #2563eb;
+                        color: white;
+                        border: none;
+                        padding: 1rem;
+                        cursor: pointer;
+                        margin-top: 1rem;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="editor-container">
+                    <div class="code-panel">
+                        <textarea id="codeEditor">${code}</textarea>
+                        <button class="run-btn" onclick="runCode()">Run Code</button>
                     </div>
-                    <script>
-                        function runCode() {
-                            const code = document.getElementById('codeEditor').value;
-                            const preview = document.getElementById('preview');
-                            preview.srcdoc = code;
-                        }
-                        // Initial run
-                        runCode();
-                    </script>
-                </body>
-                </html>
-            `);
-        });
+                    <iframe class="preview" id="preview"></iframe>
+                </div>
+                <script>
+                    function runCode() {
+                        const code = document.getElementById('codeEditor').value;
+                        const preview = document.getElementById('preview');
+                        preview.srcdoc = code;
+                    }
+                    // Initial run
+                    runCode();
+                </script>
+            </body>
+            </html>
+        `);
     });
+});
+
+
+    // Exercise Button
+const exerciseButtons = document.querySelectorAll('.start-exercise-btn');
+exerciseButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const exerciseWindow = window.open('', '_blank', 'width=800,height=600');
+        exerciseWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Practice Exercise</title>
+                <style>
+                    body { margin: 0; font-family: system-ui; background: #1e1e1e; color: #fff; }
+                    .exercise-container { padding: 2rem; }
+                    .editor { 
+                        width: 100%; 
+                        height: 300px; 
+                        background: #2d2d2d; 
+                        color: #fff; 
+                        border: none; 
+                        padding: 1rem; 
+                        margin: 1rem 0;
+                        font-family: monospace;
+                    }
+                    .check-btn {
+                        background: #2563eb;
+                        color: white;
+                        border: none;
+                        padding: 1rem 2rem;
+                        cursor: pointer;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="exercise-container">
+                    <h2>Practice Exercise</h2>
+                    <p>Complete the exercise according to the instructions:</p>
+                    <textarea class="editor"></textarea>
+                    <button class="check-btn" onclick="checkSolution()">Check Solution</button>
+                    <div id="result"></div>
+                </div>
+                <script>
+                    function checkSolution() {
+                        // Add exercise validation logic here
+                        document.getElementById('result').innerHTML = 'Great job! Exercise completed.';
+                    }
+                </script>
+            </body>
+            </html>
+        `);
+    });
+});
+
 
     // Navigation Functions
     const pages = [
