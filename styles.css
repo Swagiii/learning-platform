@@ -8,6 +8,9 @@
 nav {
     background-color: #333;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -20,6 +23,7 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -41,9 +45,9 @@ main {
 h1 {
     color: #2c3e50;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
-/* Add to your styles.css */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -56,14 +60,91 @@ h1 {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 section {
     margin: 2rem 0;
     padding: 2rem;
+    background: white;
+    border-radius: 10px;
 }
 
 h2 {
     color: #2c3e50;
     margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.exercise-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.exercise-btn:hover {
+    background: #2980b9;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.features {
+    margin-top: 2rem;
+}
+
+.features ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.features li {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 1rem;
+    }
 }
