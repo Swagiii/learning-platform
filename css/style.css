@@ -144,3 +144,67 @@ body {
         margin-left: 0;
     }
 }
+
+/* Tutorial Page Styles */
+.tutorial-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tutorial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tutorial-nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.example-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+}
+
+.code-example {
+    background: #1E1E1E;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.try-it-btn, .start-exercise-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.exercise-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    --text-color: #fff;
+    --bg-color: #1E1E1E;
+    --sidebar-bg: #2D2D2D;
+    --card-bg: #2D2D2D;
+}
+
+.dark-mode .exercise-box {
+    background: #2D2D2D;
+    border-color: #444;
+}
