@@ -14,7 +14,7 @@
 /* Dark Theme */
 [data-theme="dark"] {
     --primary: #60a5fa;
-    --secondary: #3b82f6;
+    --secondary: #93c5fd;
     --accent: #1e293b;
     --background: #111827;
     --card-bg: #1f2937;
@@ -220,6 +220,28 @@ body {
 .tutorial-card h3 {
     color: var(--primary);
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tutorial-card p {
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.learn-btn {
+    display: inline-block;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.learn-btn:hover {
+    transform: translateX(10px);
+    color: var(--secondary);
 }
 
 /* Features Section */
@@ -267,6 +289,20 @@ footer {
     text-decoration: none;
 }
 
+/* Dark theme specific adjustments */
+[data-theme="dark"] .tutorial-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .learn-btn {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .learn-btn:hover {
+    color: #93c5fd;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-content {
@@ -289,6 +325,10 @@ footer {
 
     .cta-buttons {
         flex-direction: column;
+    }
+
+    .tutorial-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer-content {
