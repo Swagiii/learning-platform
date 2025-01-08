@@ -1,82 +1,155 @@
-/* Element Grid Styles */
-.element-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.element-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.element-preview {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 0.5rem;
-}
-
-.preview-box {
-    margin-top: 0.5rem;
-    padding: 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-}
-
-/* Tutorial Navigation */
-.tutorial-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e5e7eb;
-}
-
-.nav-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--card-bg);
-    color: var(--text);
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.nav-btn:hover {
-    background: var(--primary);
-    color: white;
-}
-
-.nav-btn.prev::before {
-    content: '←';
-    margin-right: 0.5rem;
-}
-
-.nav-btn.next::after {
-    content: '→';
-    margin-left: 0.5rem;
-}
-
-/* Add these styles */
+/* Tutorial Layout */
 .tutorial-container {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 2rem;
-    margin-top: 80px;
-    min-height: calc(100vh - 80px);
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 80px auto 0;
     padding: 0 2rem;
+    min-height: calc(100vh - 80px);
 }
 
+/* Sidebar */
+.tutorial-sidebar {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.chapter-list h3 {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.chapter-list ul {
+    list-style: none;
+}
+
+.chapter-list li {
+    margin: 0.5rem 0;
+}
+
+.chapter-list a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.chapter-list li.active a,
+.chapter-list a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Tutorial Content */
 .tutorial-content {
     padding: 2rem;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: var(--background);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.content-box {
+    margin-bottom: 2rem;
+}
+
+/* Code Examples */
+.code-example {
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.code-example pre {
+    padding: 1.5rem;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.code-example code {
+    font-family: 'Fira Code', monospace;
+    color: #e0e0e0;
+}
+
+/* Preview Box */
+.preview-box {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Try it Button */
+.try-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.try-btn:hover {
+    background: var(--secondary);
+}
+
+/* Key Points Section */
+.key-points {
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Practice Section */
+.practice-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+}
+
+/* Progress Indicator */
+.chapter-list li.completed a::after {
+    content: '✓';
+    margin-left: 0.5rem;
+    color: #4CAF50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tutorial-section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tutorial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-sidebar {
+        position: static;
+        height: auto;
+        margin-bottom: 2rem;
+    }
 }
