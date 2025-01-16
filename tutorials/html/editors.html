@@ -8,9 +8,20 @@
     <link rel="stylesheet" href="../../css/tutorial.css">
 </head>
 <body>
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <!-- Your existing nav structure -->
+    <!-- Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-content">
+            <a href="../../index.html" class="logo">LearnDev</a>
+            <div class="search">
+                <input type="text" placeholder="Search tutorials...">
+            </div>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="#practice">Practice</a>
+                <a href="#challenges">Challenges</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
     </nav>
 
     <div class="tutorial-container">
@@ -19,142 +30,143 @@
             <div class="chapter-list">
                 <h3>HTML Tutorial</h3>
                 <ul>
-                    <li><a href="introduction.html">HTML Introduction</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
                     <li class="active"><a href="editors.html">HTML Editors</a></li>
-                    <li><a href="basic.html">HTML Basic</a></li>
-                    <!-- Other sidebar items -->
+                    <li><a href="basics.html">HTML Basics</a></li>
+                    <li><a href="elements.html">HTML Elements</a></li>
+                    <li><a href="attributes.html">HTML Attributes</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Content -->
         <main class="tutorial-content">
-            <h1>Getting Started with HTML Editors</h1>
-            
+            <h1>HTML Editors</h1>
             <div class="content-box">
                 <div class="intro-story">
-                    <h2>Choose Your Editor</h2>
-                    <p>Starting with HTML is simple - all you need is a basic text editor! While there are many sophisticated coding tools available, beginning with a simple editor helps you better understand the fundamentals.</p>
+                    <h2>Getting Started with HTML Editors</h2>
+                    <p>Writing HTML code is simple - all you need is a text editor! While there are many advanced code editors available, starting with a basic text editor helps you understand HTML better.</p>
                 </div>
 
-                <div class="editor-options">
-                    <h2>Popular HTML Editors</h2>
+                <section class="editor-types">
+                    <h2>Types of HTML Editors</h2>
                     <div class="feature-grid">
                         <div class="feature-card">
-                            <h3>🗒️ Basic Text Editors</h3>
+                            <h3>Basic Text Editors</h3>
                             <ul>
                                 <li>Notepad (Windows)</li>
                                 <li>TextEdit (Mac)</li>
-                                <li>Simple and lightweight</li>
-                                <li>Perfect for beginners</li>
+                                <li>Great for learning</li>
+                                <li>No distracting features</li>
                             </ul>
                         </div>
                         <div class="feature-card">
-                            <h3>💻 Code Editors</h3>
+                            <h3>Professional Code Editors</h3>
                             <ul>
                                 <li>Visual Studio Code</li>
                                 <li>Sublime Text</li>
-                                <li>Atom</li>
+                                <li>Syntax highlighting</li>
                                 <li>Advanced features</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="tutorial-section">
-                    <h2>Creating Your First HTML Page</h2>
+                <section class="setup-guide">
+                    <h2>Creating Your First HTML File</h2>
                     
-                    <div class="steps-guide">
-                        <div class="step">
-                            <h3>Step 1: Open Your Editor</h3>
-                            <div class="step-content">
-                                <h4>Windows (Notepad):</h4>
-                                <ul>
-                                    <li>Press Start</li>
+                    <div class="guide-step">
+                        <h3>Step 1: Open Your Editor</h3>
+                        <div class="os-specific">
+                            <div class="windows">
+                                <h4>Windows (Notepad)</h4>
+                                <ol>
+                                    <li>Click Start Menu</li>
                                     <li>Type "Notepad"</li>
-                                    <li>Click on Notepad app</li>
-                                </ul>
-                                
-                                <h4>Mac (TextEdit):</h4>
-                                <ul>
+                                    <li>Click Notepad app</li>
+                                </ol>
+                            </div>
+                            <div class="mac">
+                                <h4>Mac (TextEdit)</h4>
+                                <ol>
                                     <li>Open Applications</li>
-                                    <li>Find TextEdit</li>
-                                    <li>Set to Plain Text mode (Format → Make Plain Text)</li>
-                                </ul>
+                                    <li>Open TextEdit</li>
+                                    <li>Go to Format → Make Plain Text</li>
+                                </ol>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="step">
-                            <h3>Step 2: Write Your HTML</h3>
-                            <div class="code-example">
-                                <pre><code>&lt;!DOCTYPE html&gt;
+                    <div class="guide-step">
+                        <h3>Step 2: Write Basic HTML</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;title&gt;My First Page&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-    &lt;p&gt;This is my first web page.&lt;/p&gt;
+    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                                <button class="try-btn">Try it Yourself ▶</button>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <h3>Step 3: Save Your File</h3>
-                            <div class="important-box">
-                                <h4>Important Tips:</h4>
-                                <ul>
-                                    <li>Save with .html extension (e.g., "index.html")</li>
-                                    <li>Use UTF-8 encoding</li>
-                                    <li>Remember the file location</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <h3>Step 4: View in Browser</h3>
-                            <p>Double-click your saved HTML file to open it in your default web browser.</p>
+                            <button class="try-btn">Try it Yourself</button>
                         </div>
                     </div>
-                </div>
 
-                <div class="pro-tips">
-                    <h2>Pro Tips</h2>
+                    <div class="guide-step">
+                        <h3>Step 3: Save Your File</h3>
+                        <div class="important-note">
+                            <h4>Important Tips:</h4>
+                            <ul>
+                                <li>Save with .html extension (example: index.html)</li>
+                                <li>Use UTF-8 encoding when saving</li>
+                                <li>Remember where you saved the file</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <h3>Step 4: View in Browser</h3>
+                        <p>Double-click your saved file to open it in your default web browser.</p>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Best Practices</h2>
                     <div class="tips-grid">
                         <div class="tip-card">
-                            <h3>📝 File Extensions</h3>
-                            <p>Both .html and .htm work - choose either one consistently.</p>
+                            <h3>File Organization</h3>
+                            <p>Create a dedicated folder for your HTML projects</p>
                         </div>
                         <div class="tip-card">
-                            <h3>🔄 Auto-Refresh</h3>
-                            <p>Most modern editors offer live preview features.</p>
+                            <h3>File Naming</h3>
+                            <p>Use meaningful names and stick to .html extension</p>
                         </div>
                         <div class="tip-card">
-                            <h3>📊 Organization</h3>
-                            <p>Keep your HTML files in a dedicated project folder.</p>
+                            <h3>Regular Saving</h3>
+                            <p>Save your work frequently to avoid losing changes</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="practice-section">
+                <section class="practice-section">
                     <h2>Practice Exercise</h2>
                     <div class="exercise-box">
                         <h3>Try This:</h3>
                         <ol>
-                            <li>Open your text editor</li>
                             <li>Create a new HTML file</li>
-                            <li>Add a title and a paragraph</li>
-                            <li>Save and view in browser</li>
+                            <li>Add a heading and two paragraphs</li>
+                            <li>Save the file as 'practice.html'</li>
+                            <li>Open it in your browser</li>
                         </ol>
-                        <button class="exercise-btn">Start Exercise ▶</button>
+                        <button class="exercise-btn">Start Exercise</button>
                     </div>
-                </div>
+                </section>
 
                 <div class="tutorial-nav">
                     <a href="introduction.html" class="nav-btn">← Previous: Introduction</a>
-                    <a href="basic.html" class="nav-btn">Next: HTML Basics →</a>
+                    <a href="basics.html" class="nav-btn">Next: HTML Basics →</a>
                 </div>
             </div>
         </main>
