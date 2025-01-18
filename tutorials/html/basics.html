@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Basics | Learn Web Dev</title>
+    <title>HTML Basics | LearnDev</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/tutorial.css">
 </head>
@@ -11,7 +11,7 @@
     <!-- Navigation -->
     <nav class="floating-nav">
         <div class="nav-content">
-            <a href="../../index.html" class="logo">Learn Web Dev</a>
+            <a href="../../index.html" class="logo">LearnDev</a>
             <div class="search">
                 <input type="text" placeholder="Search tutorials...">
             </div>
@@ -28,9 +28,10 @@
         <!-- Sidebar -->
         <aside class="tutorial-sidebar">
             <div class="chapter-list">
-                <h3>HTML Basics</h3>
+                <h3>HTML Tutorial</h3>
                 <ul>
                     <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="editors.html">HTML Editors</a></li>
                     <li class="active"><a href="basics.html">HTML Basics</a></li>
                     <li><a href="elements.html">HTML Elements</a></li>
                     <li><a href="attributes.html">HTML Attributes</a></li>
@@ -41,36 +42,126 @@
         <!-- Main Content -->
         <main class="tutorial-content">
             <h1>HTML Basics</h1>
+            
             <div class="content-box">
-                <h2>What is HTML?</h2>
-                <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
-
-                <div class="key-points">
-                    <h3>Key Points:</h3>
-                    <ul>
-                        <li>HTML stands for HyperText Markup Language</li>
-                        <li>HTML describes the structure of web pages</li>
-                        <li>HTML consists of elements</li>
-                        <li>Elements tell the browser how to display content</li>
-                    </ul>
+                <div class="intro-story">
+                    <h2>Building Your First Web Page</h2>
+                    <p>Let's explore the fundamental building blocks of every HTML document and learn how to create your first web page.</p>
                 </div>
 
-                <div class="code-example">
-                    <pre><code>&lt;!DOCTYPE html&gt;
+                <section class="document-structure">
+                    <h2>HTML Document Structure</h2>
+                    <div class="code-example">
+                        <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;title&gt;Basic HTML Structure&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+    &lt;p&gt;This is a basic HTML document.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                    <button class="try-btn">Try it Yourself</button>
-                </div>
+                        <button class="try-btn">Try it Yourself</button>
+                    </div>
+
+                    <div class="explanation-grid">
+                        <div class="explanation-card">
+                            <h3>DOCTYPE Declaration</h3>
+                            <p>Every HTML document must start with <code>&lt;!DOCTYPE html&gt;</code> to tell browsers it's an HTML5 document.</p>
+                        </div>
+                        <div class="explanation-card">
+                            <h3>HTML Element</h3>
+                            <p>The <code>&lt;html&gt;</code> element is the root element containing all other elements.</p>
+                        </div>
+                        <div class="explanation-card">
+                            <h3>Head Section</h3>
+                            <p>The <code>&lt;head&gt;</code> contains metadata about the document.</p>
+                        </div>
+                        <div class="explanation-card">
+                            <h3>Body Section</h3>
+                            <p>The <code>&lt;body&gt;</code> contains all visible content.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="basic-elements">
+                    <h2>Essential HTML Elements</h2>
+                    
+                    <div class="element-group">
+                        <h3>Headings</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;
+&lt;h4&gt;Even Smaller&lt;/h4&gt;
+&lt;h5&gt;Small Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code></pre>
+                            <button class="try-btn">Try it Yourself</button>
+                        </div>
+                    </div>
+
+                    <div class="element-group">
+                        <h3>Paragraphs</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
+                            <button class="try-btn">Try it Yourself</button>
+                        </div>
+                    </div>
+
+                    <div class="element-group">
+                        <h3>Links</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;a href="https://example.com"&gt;Click here to visit&lt;/a&gt;</code></pre>
+                            <button class="try-btn">Try it Yourself</button>
+                        </div>
+                    </div>
+
+                    <div class="element-group">
+                        <h3>Images</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;</code></pre>
+                            <button class="try-btn">Try it Yourself</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h3>🔍 View Source Code</h3>
+                            <p>Press CTRL + U to view any webpage's source code</p>
+                        </div>
+                        <div class="tip-card">
+                            <h3>🛠️ Inspect Elements</h3>
+                            <p>Right-click and select "Inspect" to examine specific elements</p>
+                        </div>
+                        <div class="tip-card">
+                            <h3>📝 Clean Code</h3>
+                            <p>Use proper indentation for better readability</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="practice-section">
+                    <h2>Practice Exercise</h2>
+                    <div class="exercise-box">
+                        <h3>Create a Simple Web Page</h3>
+                        <p>Create an HTML document that includes:</p>
+                        <ul>
+                            <li>A main heading</li>
+                            <li>Two paragraphs</li>
+                            <li>A link to your favorite website</li>
+                            <li>An image</li>
+                        </ul>
+                        <button class="exercise-btn">Start Exercise</button>
+                    </div>
+                </section>
 
                 <div class="tutorial-nav">
-                    <a href="introduction.html" class="nav-btn">← Previous: Introduction</a>
+                    <a href="editors.html" class="nav-btn">← Previous: HTML Editors</a>
                     <a href="elements.html" class="nav-btn">Next: HTML Elements →</a>
                 </div>
             </div>
